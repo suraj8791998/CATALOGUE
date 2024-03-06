@@ -8,7 +8,7 @@ pipeline{
         }
         stage('UNIT TEST'){
             steps{
-                echo 'UNIT TEST IS SUCCESS'
+                echo 'UNIT TEST SUCCESS'
             }
         }
         stage('SONARQUBE'){
