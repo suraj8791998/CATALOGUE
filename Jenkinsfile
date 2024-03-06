@@ -1,18 +1,18 @@
 pipeline{
     agent { node { label 'node' } }
     stages{
-        stage{
-            steps('INSTALL DEPENDENCIES'){
+        stage('INSTALL DEPENDENCIES'){
+            steps{
                 sh 'npm install'
             }
         }
-        stage{
-            steps('UNIT TEST'){
+        stage('UNIT TEST'){
+            steps{
                 echo 'UNIT TEST IS SUCCESS'
             }
         }
-        stage{
-            steps('SONARQUBE'){
+        stage('SONARQUBE'){
+            steps{
                 sh 'sonar-scanner'
             }
         }
