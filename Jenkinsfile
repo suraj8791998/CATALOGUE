@@ -1,5 +1,5 @@
 pipeline{
-    agent { node { label 'node' } }
+    agent any
     stages{
         stage('INSTALL DEPENDENCIES'){
             steps{
@@ -16,6 +16,6 @@ pipeline{
                 sh 'sonar-scanner'
             }
         }
-        
+
     }
 }
